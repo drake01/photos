@@ -101,3 +101,24 @@ Client request:
 ```
 http -a abc:abc PUT http://127.0.0.1:8000/api/v1/image/2/ albums:='[1,2,3]' title='new image title'
 ```
+
+GET requests:
+
+```
+http -a abc:abc GET http://127.0.0.1:8000/api/v1/image/
+
+http -a xyz:xyz GET http://127.0.0.1:8000/api/v1/image/
+```
+
+
+returns 403 without -a user:password
+```
+http GET http://127.0.0.1:8000/api/v1/image/ 
+```
+
+```
+http -a abc:abc GET http://127.0.0.1:8000/api/v1/album/
+
+http -a xyz:xyz GET http://127.0.0.1:8000/api/v1/album/
+```
+

@@ -34,9 +34,17 @@ api path: http://127.0.0.1:8000/api/v1/
 
 APIs:
 
-```/image/```
-```/album/```
-```/user/```
+```
+/image/
+```
+
+```
+/album/
+```
+
+```
+/user/
+```
 
 INSTALLATION:
 ===============
@@ -57,21 +65,26 @@ using "httpie":
 ===============
 
 * create users: abc and xyz:
-```http POST http://127.0.0.1:8000/api/v1/user/ email=abc@abc.com username=abc password=abc
+```
+http POST http://127.0.0.1:8000/api/v1/user/ email=abc@abc.com username=abc password=abc
+
 http POST http://127.0.0.1:8000/api/v1/user/ email=xyz@xyz.com username=xyz password=xyz
 ```
 * create some images
-```http -a abc:abc POST http://127.0.0.1:8000/api/v1/image/ title="abc image" url="abc url"
+```
+http -a abc:abc POST http://127.0.0.1:8000/api/v1/image/ title="abc image" url="abc url"
 http -a abc:abc POST http://127.0.0.1:8000/api/v1/image/ title="abc image2" url="abc url2"
 ```
 
 * create some images for user: xyz
-```http -a xyz:xyz POST http://127.0.0.1:8000/api/v1/image/ title="xyz image" url="xyz url"
+```
+http -a xyz:xyz POST http://127.0.0.1:8000/api/v1/image/ title="xyz image" url="xyz url"
 http -a xyz:xyz POST http://127.0.0.1:8000/api/v1/image/ title="xyz image2" url="xyz url2"
 ```
 
 * create albums:
-```http -a abc:abc POST http://127.0.0.1:8000/api/v1/album/ name="abc album"
+```
+http -a abc:abc POST http://127.0.0.1:8000/api/v1/album/ name="abc album"
 http -a abc:abc POST http://127.0.0.1:8000/api/v1/album/ name="abc album2"
 ```
 ```
